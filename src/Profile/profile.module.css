@@ -1,0 +1,30 @@
+/* .profile {
+  margin-left: auto;
+  margin-right: auto;
+} */
+
+/* .description {
+  display: inline-block;
+  align-items: center;
+} */
+
+.avatar {
+  width: 150px;
+  height: 150px;
+  border: 1px solid black;
+  border-radius: 2px;
+  padding: 15px;
+}
+
+.name {
+  font-size: 25px;
+  font-weight: 500;
+  margin: 10px 0px;
+  padding-left: 18px;
+}
+
+.tag {
+  margin: 0px;
+  padding-left: 55px;
+  font-weight: 500;
+}
