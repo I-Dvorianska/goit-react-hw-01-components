@@ -1,14 +1,14 @@
 // import s from "Statistics/statistics.module.css";
-import items from "statistical-data.json";
+
 import StatItem from "Statistics/statisticsItem";
 
-const Statistics = () => {
+const Statistics = ({ stats, title }) => {
   return (
     <section className="statistics">
-      <h2 className="title">Upload stats</h2>
+      <h2 className="title">{title}</h2>
 
       <ul className="stat-list">
-        {items.map((item) => {
+        {stats.map((item) => {
           return (
             <li key={item.id} className="item">
               <StatItem
