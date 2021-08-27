@@ -1,6 +1,7 @@
 import s from "Statistics/statistics.module.css";
 import getRendomColor from "./getRendomColor";
 import StatItem from "Statistics/statisticsItem";
+import PropTypes from "prop-types";
 
 const Statistics = ({ stats, title }) => {
   return (
@@ -26,6 +27,15 @@ const Statistics = ({ stats, title }) => {
       </ul>
     </section>
   );
+};
+Statistics.propTypes = {
+  title: PropTypes.string,
+  stats: PropTypes.arrayOf(
+    PropTypes.exact({
+      optionalProperty: PropTypes.string,
+      requiredProperty: PropTypes.number.isRequired,
+    })
+  ),
 };
 
 export default Statistics;
