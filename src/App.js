@@ -1,12 +1,12 @@
 import { UserDescr } from "Profile/profile";
 import user from "user.json";
-// import StatItem from "Statistics/statisticsItem";
 import Statistics from "Statistics/statistics";
 import items from "statistical-data.json";
+import s from "App.module.css";
 
 export default function App() {
   return (
-    <div>
+    <div className={s.wrapper}>
       <UserDescr
         name={user.name}
         tag={user.tag}
