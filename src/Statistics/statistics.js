@@ -31,9 +31,10 @@ const Statistics = ({ stats, title }) => {
 Statistics.propTypes = {
   title: PropTypes.string,
   stats: PropTypes.arrayOf(
-    PropTypes.exact({
-      optionalProperty: PropTypes.string,
-      requiredProperty: PropTypes.number.isRequired,
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string,
+      percentage: PropTypes.number.isRequired,
     })
   ),
 };
