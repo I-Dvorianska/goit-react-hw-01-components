@@ -2,10 +2,7 @@ import { UserDescr } from "Profile/profile";
 import Statistics from "Statistics/statistics";
 import FriendsList from "FriendList/friendList";
 import TransactionHistory from "Transactions/transactionsList";
-import user from "Json/user.json";
-import friends from "Json/friends.json";
-import items from "Json/statistical-data.json";
-import transactions from "Json/transactions.json";
+import { user, friends, items, transactions } from "Json";
 import s from "App.module.css";
 
 export default function App() {
