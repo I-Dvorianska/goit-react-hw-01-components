@@ -1,5 +1,4 @@
 import s from "Statistics/statistics.module.css";
-import getRendomColor from "./getRendomColor";
 import StatItem from "Statistics/statisticsItem";
 import PropTypes from "prop-types";
 
@@ -11,17 +10,12 @@ const Statistics = ({ stats, title }) => {
       <ul className={s.statList}>
         {stats.map((item) => {
           return (
-            <li
+            <StatItem
+              label={item.label}
+              percentage={item.percentage}
+              id={item.id}
               key={item.id}
-              className={s.item}
-              style={{ backgroundColor: getRendomColor() }}
-            >
-              <StatItem
-                label={item.label}
-                percentage={item.percentage}
-                id={item.id}
-              />
-            </li>
+            />
           );
         })}
       </ul>
@@ -32,7 +26,6 @@ Statistics.propTypes = {
   title: PropTypes.string,
   stats: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.string.isRequired,
       label: PropTypes.string,
       percentage: PropTypes.number.isRequired,
     })
